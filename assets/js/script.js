@@ -136,14 +136,33 @@ var swiper = new Swiper(".hero__slider--activation", {
   speed: 500,
   spaceBetween: 30,
   autoplay: {
-    delay: 3000, // Slide every 3 seconds
-    disableOnInteraction: false, // Keep autoplay after user interaction
+    delay: 3000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
+
+//header hide on scroll down activation
+let lastScrollTop = 0;
+const header = document.querySelector('.header__sticky');
+
+window.addEventListener('scroll', function () {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scroll down
+    header.classList.add('header__hide');
+  } else {
+    // Scroll up
+    header.classList.remove('header__hide');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scroll
+});
+
 
 // collection swiper column5 activation
 var swiper = new Swiper(".shop__collection--column5", {
