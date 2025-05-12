@@ -772,6 +772,7 @@ hr {
   padding-right: 0;
   padding-left: 0;
 }
+
 .sticky .main__logo--img {
   filter: brightness(0) invert(1);
 }
@@ -1660,6 +1661,16 @@ body.overlay__active::before,
 
 .offcanvas__header--menu__open--svg {
   width: 32px;
+
+}
+.offcanvas__header--menu__open--svg path {
+  stroke: white;
+  fill: white;
+}
+
+.offcanvas__header--menu__open--svg.black-icon path {
+  stroke: black !important;
+  fill: black !important;
 }
 
 .offcanvas__header--menu__open--btn>* {
@@ -2187,13 +2198,16 @@ body.overlay__active::before,
 @media only screen and (max-width: 767px) {
   .main__logo {
     padding-left: 4.5rem;
-    display: none;
+    display: block;
+    align-self: center;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .main__logo {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
 }
@@ -3128,7 +3142,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header__info--text a {
   color: var(--text-white-color);
-  
+
 }
 
 .header__info--text a:hover {
@@ -3180,6 +3194,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .main__logo--img.sticky__block {
   display: none;
+
 }
 
 .header__sticky.sticky .header__account--btn.text-white {
