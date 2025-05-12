@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Becute - Jewelry, Cosmetics and Beauty eCommerce HTML Template</title>
+    <title></title>
     <meta name="description" content="Morden Bootstrap HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <!-- <div class="dot" id="dot"></div> -->
 
     <!-- Start preloader -->
 
@@ -47,7 +48,8 @@
                     </div>
                     <div class="main__logo">
                         <h1 class="main__logo--title"><a class="main__logo--link" href="index.html">
-                                <!-- <img class="main__logo--img" src="assets/img/logo/nav-log.webp" alt="logo-img"> -->
+                                <img class="main__logo--img " style="width: 200px; height: 90px;"
+                                    src="assets/img/logo/Swiss_new_02-01.png" alt="logo-img">
                             </a></h1>
                     </div>
                     <div class="header__menu d-none d-lg-block">
@@ -249,7 +251,7 @@
                                 </path>
                             </svg>
                         </span>
-                        <span class="offcanvas__sticky--toolbar__label">Shop</span>
+                        <span class="offcanvas__sticky--toolbar__label">About</span>
                     </a>
                 </li>
                 <li class="offcanvas__sticky--toolbar__list ">
@@ -263,7 +265,7 @@
                                     stroke-width="32" d="M338.29 338.29L448 448" />
                             </svg>
                         </span>
-                        <span class="offcanvas__sticky--toolbar__label">Search</span>
+                        <span class="offcanvas__sticky--toolbar__label">Bullion</span>
                     </a>
                 </li>
                 <li class="offcanvas__sticky--toolbar__list">
@@ -277,7 +279,7 @@
                                     fill="currentColor" />
                             </svg>
                         </span>
-                        <span class="offcanvas__sticky--toolbar__label">Cart</span>
+                        <span class="offcanvas__sticky--toolbar__label">Ornaments</span>
                         <span class="items__count">3</span>
                     </a>
                 </li>
@@ -291,7 +293,7 @@
                                     fill="currentColor" />
                             </svg>
                         </span>
-                        <span class="offcanvas__sticky--toolbar__label">Wishlist</span>
+                        <span class="offcanvas__sticky--toolbar__label">Contact</span>
                         <span class="items__count">3</span>
                     </a>
                 </li>
@@ -754,8 +756,8 @@
 
         <section class="advice__banner--section">
             <div class="container">
-                <div class="advice__banner--box position-relative">
-                    <img class="advice__banner--thumbnail height_225 border-radius-5"
+                <div class="advice__banner--box position-relative ">
+                    <img class="advice__banner--thumbnail height_225 border-radius-5 "
                         src="assets/img/product/category/B11A-01.png" alt="banner">
                     <div class="new__advice__banner--content banner__flex d-flex align-items-center">
                         <div class="advice__banner--content__left">
@@ -1111,8 +1113,10 @@
 
     </main>
 
+
+
     <!-- Start footer section -->
-    <!-- <footer class="footer__section footer__bg">
+    <footer class="footer__section footer__bg">
         <div class="container">
             <div class="main__footer section--padding">
                 <div class="row ">
@@ -1310,7 +1314,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- End footer section -->
 
     <!-- Quickview Wrapper -->
@@ -1776,6 +1780,29 @@
             });
         });
     </script>
+    <!-- <script>
+        const dot = document.getElementById("dot");
+
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
+
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            // Smooth follow using interpolation
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            dot.style.transform = `translate(${currentX - 6}px, ${currentY - 6}px)`; // -6 centers the dot
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script> -->
 
 
     <!-- Customscript js -->
